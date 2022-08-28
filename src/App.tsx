@@ -9,7 +9,10 @@ function App() {
   const appState = useContext(AppContext);
 
   return (
-    <div className="App">
+    <div className={`App ${appState.theme}`}>
+      <h1 className="text-3xl font-bold dark:underline">
+        Hello world!
+      </h1>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>{t("under.construction.title")}</p>
@@ -20,7 +23,14 @@ function App() {
               : appState.setLang("pt-BR")
           }
         >
-          CLICK ME
+          CLICK ME TO CHANGE LANGUAGE
+        </p>
+        <p
+          onClick={() =>
+            appState.theme === "dark" ? appState.setTheme("light") : appState.setTheme("dark")
+          }
+        >
+          CLICK ME TO CHANGE THEME
         </p>
       </header>
     </div>
