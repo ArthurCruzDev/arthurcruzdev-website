@@ -1,28 +1,62 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { AppRoutes } from "../../App";
+import styles from "./header.module.scss";
 
 const backdropRoot = document.querySelector("#backdrop-root") as HTMLElement;
 const overlayRoot = document.querySelector("#overlay-root") as HTMLElement;
 
-const NavList = () => {
+interface NavListLinkPropsInterface {
+  to: string;
+  translationName: string;
+}
+
+const NavListLink = (props: NavListLinkPropsInterface) => {
   const { t } = useTranslation();
+  const [isSelected, setSelected] = useState(false);
+
   return (
-    <ul className="">
-      <li>
-        <NavLink to="/">{t("pages.homepage.name")}</NavLink>
-      </li>
-      <li>
-        <NavLink to="/">{t("pages.experience.name")}</NavLink>
-      </li>
-      <li>
-        <NavLink to="/">{t("pages.skils.name")}</NavLink>
-      </li>
-      <li>
-        <NavLink to="/">{t("pages.portifolio.name")}</NavLink>
-      </li>
+    <li
+      className={
+        "w-full h-8 flex flex-row justify-center items-center md:w-auto md:px-2 " +
+        (isSelected ? "bg-slate-800" : "bg-transparent")
+      }
+    >
+      <NavLink
+        className={({ isActive }) => {
+          if (isActive) {
+            return " text-slate-200";
+          } else {
+            return undefined;
+          }
+        }}
+        to={props.to}
+      >
+        {t(props.translationName)}
+      </NavLink>
+    </li>
+  );
+};
+
+const NavList = () => {
+  return (
+    <ul className="w-full text-center md:flex md:gap-3">
+      <NavListLink
+        to={AppRoutes.homepage}
+        translationName="pages.homepage.name"
+      />
+      <NavListLink
+        to={AppRoutes.experience}
+        translationName="pages.experience.name"
+      />
+      <NavListLink to={AppRoutes.skills} translationName="pages.skills.name" />
+      <NavListLink
+        to={AppRoutes.portifolio}
+        translationName="pages.portifolio.name"
+      />
     </ul>
   );
 };
@@ -34,7 +68,7 @@ interface SideNavProps {
 const Backdrop = (props: SideNavProps) => {
   return (
     <div
-      className="w-full h-screen opacity-25 bg-black fixed top-0 left-0 z-10"
+      className="w-full h-screen opacity-25 bg-black fixed top-0 left-0 z-10 md:hidden"
       onClick={() => props.clickHandler()}
     ></div>
   );
@@ -48,11 +82,11 @@ const SideNav = (props: SideNavProps) => {
   return (
     <nav
       className="fixed right-0 top-0 w-9/12 h-full bg-sky-600 flex flex-col justify-start items-center
-     p-3 z-20"
+     py-3 z-20 md:hidden"
     >
-      <span className="w-full flex flex-row justify-end">
+      <span className="w-full flex flex-row justify-end sm:hidden">
         <XMarkIcon
-          className="h-8 w-8 text-neutral-800 sm:hidden"
+          className="h-8 w-8 mr-3 text-neutral-800 "
           onClick={closeSideNavHandler}
         ></XMarkIcon>
       </span>
@@ -82,7 +116,7 @@ const Header = () => {
           )}
         </React.Fragment>
       )}
-      <div className="hidden sm:block">
+      <div className="hidden sm:block md:w-full">
         <NavList></NavList>
       </div>
       <Bars4Icon
