@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { NavLink, useMatch } from "react-router-dom";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { AppRoutes } from "../../App";
 import styles from "./header.module.scss";
@@ -16,21 +16,20 @@ interface NavListLinkPropsInterface {
 
 const NavListLink = (props: NavListLinkPropsInterface) => {
   const { t } = useTranslation();
-  const [isSelected, setSelected] = useState(false);
 
   return (
     <li
       className={
-        "w-full h-8 flex flex-row justify-center items-center md:w-auto md:px-2 " +
-        (isSelected ? "bg-slate-800" : "bg-transparent")
+        " w-full h-8 flex flex-row justify-center items-center hover:bg-slate-800 md:w-auto md:px-2 " +
+        (useMatch(props.to) ? "bg-slate-800" : "bg-transparent")
       }
     >
       <NavLink
         className={({ isActive }) => {
           if (isActive) {
-            return " text-slate-200";
+            return "w-full text-slate-200";
           } else {
-            return undefined;
+            return "w-full hover:text-slate-200 ";
           }
         }}
         to={props.to}
