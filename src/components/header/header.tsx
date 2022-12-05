@@ -62,12 +62,18 @@ const NavList = () => {
 
 interface SideNavProps {
   clickHandler: Function;
+  isNavOpen: boolean;
 }
 
 const Backdrop = (props: SideNavProps) => {
   return (
     <div
-      className="w-full h-screen opacity-25 bg-black fixed top-0 left-0 z-10 md:hidden"
+      className={
+        "w-full h-screen bg-black fixed top-0 left-0 md:hidden " +
+        styles.backDrop +
+        " " +
+        (props.isNavOpen ? styles.backDropActive : "")
+      }
       onClick={() => props.clickHandler()}
     ></div>
   );
@@ -80,10 +86,13 @@ const SideNav = (props: SideNavProps) => {
 
   return (
     <nav
-      className="fixed right-0 top-0 w-9/12 h-full bg-sky-600 flex flex-col justify-start items-center
-     py-3 z-20 md:hidden"
+      className={
+        "fixed top-0 h-full bg-sky-600 flex flex-col justify-start items-center py-3 z-50 md:hidden " +
+        styles.navBarContainer +
+        (props.isNavOpen ? " " + styles.isNavOpen : "")
+      }
     >
-      <span className="w-full flex flex-row justify-end sm:hidden">
+      <span className="w-full flex flex-row justify-end mb-3 sm:hidden">
         <XMarkIcon
           className="h-8 w-8 mr-3 text-neutral-800 "
           onClick={closeSideNavHandler}
@@ -103,18 +112,24 @@ const Header = () => {
 
   return (
     <nav className="flex flex-row justify-end items-center p-3 h-14 bg-sky-600">
-      {showSideNav && (
+      {
         <React.Fragment>
           {createPortal(
-            <Backdrop clickHandler={() => setShowSideNav(false)} />,
+            <Backdrop
+              clickHandler={() => setShowSideNav(false)}
+              isNavOpen={showSideNav}
+            />,
             backdropRoot
           )}
           {createPortal(
-            <SideNav clickHandler={() => setShowSideNav(false)} />,
+            <SideNav
+              clickHandler={() => setShowSideNav(false)}
+              isNavOpen={showSideNav}
+            />,
             overlayRoot
           )}
         </React.Fragment>
-      )}
+      }
       <div className="hidden sm:block md:w-full">
         <NavList></NavList>
       </div>

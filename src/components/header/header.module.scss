@@ -1,0 +1,40 @@
+.navBarContainer{
+    max-width: 320px;
+    width: 75%;
+    right: -320px;
+    transition: right .8s ease-in-out;
+}
+
+.navBarContainer.isNavOpen{
+    right: 0;
+}
+
+@keyframes backDropAnimation1 {
+    0% {z-index: -1; opacity: 0;}
+    1% {z-index: 1; opacity: 0.01;}
+    100% {z-index: 49; opacity: 0.25;}
+}
+
+@keyframes backDropAnimation2 {
+    0% {z-index: -1; opacity: 0;}
+    1% {z-index: 1; opacity: 0.01;}
+    100% {z-index: 49; opacity: 0.25;}
+}
+
+.backDrop{
+    opacity: 0;
+    z-index: -1;
+    animation-name: backDropAnimation2;
+    animation-duration: .8s;
+    animation-direction: reverse;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.backDropActive{
+    animation-name: backDropAnimation1;
+    animation-duration: .8s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
