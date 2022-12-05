@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { NavLink, useMatch } from "react-router-dom";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { AppRoutes } from "../../App";
 import styles from "./index.module.scss";
+import AppContext, {
+  AppContextType,
+} from "../../contexts/AppContext/AppContext";
 
 const backdropRoot = document.querySelector("#backdrop-root") as HTMLElement;
 const overlayRoot = document.querySelector("#overlay-root") as HTMLElement;
@@ -115,6 +118,7 @@ const SideNav = (props: SideNavProps) => {
 
 const Header = () => {
   const [showSideNav, setShowSideNav] = useState(false);
+  const appState = useContext(AppContext);
 
   const menuClickHandler = () => {
     setShowSideNav(true);
@@ -143,6 +147,16 @@ const Header = () => {
       <div className="hidden sm:block md:w-full">
         <NavList></NavList>
       </div>
+      {
+        <span
+          className={
+            "fi w-8 h-8 mr-4 " + (appState.lang === "pt-BR" ? "fi-br" : "fi-us")
+          }
+          onClick={() =>
+            appState.setLang(appState.lang === "pt-BR" ? "en-US" : "pt-BR")
+          }
+        ></span>
+      }
       <Bars4Icon
         className="h-8 w-8 text-neutral-800 sm:hidden"
         onClick={menuClickHandler}
