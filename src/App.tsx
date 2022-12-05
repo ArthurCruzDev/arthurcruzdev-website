@@ -17,7 +17,7 @@ function App() {
   const appState = useContext(AppContext);
   return (
     <section className={`${appState.theme}`}>
-      <div className="w-screen h-screen bg-white dark:bg-neutral-900 ">
+      <div className="w-screen min-h-screen bg-white dark:bg-neutral-900 flex flex-col">
         <Routes>
           <Route path={AppRoutes.homepage} element={<Homepage />} />
           <Route path="/index" element={<Navigate to="/" replace />} />

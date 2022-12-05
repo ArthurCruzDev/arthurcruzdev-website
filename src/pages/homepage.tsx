@@ -1,14 +1,12 @@
 import React from "react";
-import Header from "../components/header/header";
-import { usePageInfo } from "../hooks/usePageInfo";
 import { AppRoutes } from "../App";
+import PageLayout from "../components/pageLayout";
 
 const Homepage = () => {
   return (
-    <React.Fragment>
-      {usePageInfo("homepage", window.location.hostname + AppRoutes.homepage)}
-      <Header />
-    </React.Fragment>
+    <PageLayout pageName="homepage" pageURL={AppRoutes.homepage}>
+      <h1 className="text-white">Homepage</h1>
+    </PageLayout>
   );
 };
 

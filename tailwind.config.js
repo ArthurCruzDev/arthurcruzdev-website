@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -16,9 +19,11 @@ module.exports = {
         "monospace",
       ],
     },
-    extend: {
-      colors: {},
+    colors: {
+      ...colors,
+      background: colors.sky[600],
     },
+    extend: {},
   },
   plugins: [],
 };

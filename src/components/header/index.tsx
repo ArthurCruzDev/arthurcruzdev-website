@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink, useMatch } from "react-router-dom";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { AppRoutes } from "../../App";
-import styles from "./header.module.scss";
+import styles from "./index.module.scss";
 
 const backdropRoot = document.querySelector("#backdrop-root") as HTMLElement;
 const overlayRoot = document.querySelector("#overlay-root") as HTMLElement;
@@ -97,7 +97,7 @@ const SideNav = (props: SideNavProps) => {
   return (
     <nav
       className={
-        "fixed top-0 h-full bg-sky-600 flex flex-col justify-start items-center py-3 z-50 md:hidden " +
+        "fixed top-0 h-full bg-background flex flex-col justify-start items-center py-3 z-50 md:hidden " +
         styles.navBarContainer +
         (props.isNavOpen ? " " + styles.isNavOpen : "")
       }
