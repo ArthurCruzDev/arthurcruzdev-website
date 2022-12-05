@@ -3,7 +3,11 @@
   "pages": {
     "homepage": {
       "name": "Home",
-      "description": ""
+      "description": "",
+      "content": {
+        "mainTitle": "I'm Arthur Cruz",
+        "mainSubTitle": "FullStack developer and Solutions Architect"
+      }
     },
     "experience": {
       "name": "Experience",

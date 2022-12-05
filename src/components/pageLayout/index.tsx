@@ -1,4 +1,3 @@
-import { AppRoutes } from "../../App";
 import { usePageInfo } from "../../hooks/usePageInfo";
 import Footer from "../footer";
 import Header from "../header";

@@ -3,7 +3,11 @@
   "pages": {
     "homepage": {
       "name": "Início",
-      "description": ""
+      "description": "",
+      "content": {
+        "mainTitle": "sou Arthur Cruz",
+        "mainSubTitle": "Desenvolvedor FullStack e Arquiteto de Soluções"
+      }
     },
     "experience": {
       "name": "Experiência",
