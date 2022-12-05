@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { NavLink, useMatch } from "react-router-dom";
@@ -66,13 +66,23 @@ interface SideNavProps {
 }
 
 const Backdrop = (props: SideNavProps) => {
+  const [usedOnce, setUsedOnce] = useState<boolean>(false);
+  useEffect(() => {
+    if (props.isNavOpen) {
+      setUsedOnce(true);
+    }
+  }, [props.isNavOpen]);
   return (
     <div
       className={
         "w-full h-screen bg-black fixed top-0 left-0 md:hidden " +
         styles.backDrop +
         " " +
-        (props.isNavOpen ? styles.backDropActive : "")
+        (props.isNavOpen
+          ? styles.backDropActive
+          : usedOnce
+          ? styles.backDropUnactive
+          : "")
       }
       onClick={() => props.clickHandler()}
     ></div>

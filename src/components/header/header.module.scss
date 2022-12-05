@@ -24,17 +24,21 @@
 .backDrop{
     opacity: 0;
     z-index: -1;
-    animation-name: backDropAnimation2;
-    animation-duration: .8s;
-    animation-direction: reverse;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+
 }
 
 .backDropActive{
     animation-name: backDropAnimation1;
     animation-duration: .8s;
     animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+.backDropUnactive{
+    animation-name: backDropAnimation2;
+    animation-duration: .8s;
+    animation-direction: reverse;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
 }
