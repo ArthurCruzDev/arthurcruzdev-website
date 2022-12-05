@@ -2,16 +2,20 @@
   "under.construction.title": "Under Construction",
   "pages": {
     "homepage": {
-      "name": "Home"
+      "name": "Home",
+      "description": ""
     },
     "experience": {
-      "name": "Experience"
+      "name": "Experience",
+      "description": ""
     },
     "skills": {
-      "name": "Skills"
+      "name": "Skills",
+      "description": ""
     },
     "portifolio": {
-      "name": "Portifolio"
+      "name": "Portifolio",
+      "description": ""
     }
   }
 }

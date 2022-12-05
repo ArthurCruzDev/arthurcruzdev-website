@@ -2,16 +2,20 @@
   "under.construction.title": "Em Construção",
   "pages": {
     "homepage": {
-      "name": "Início"
+      "name": "Início",
+      "description": ""
     },
     "experience": {
-      "name": "Experiência"
+      "name": "Experiência",
+      "description": ""
     },
     "skills": {
-      "name": "Habilidades"
+      "name": "Habilidades",
+      "description": ""
     },
     "portifolio": {
-      "name": "Portifólio"
+      "name": "Portifólio",
+      "description": ""
     }
   }
 }

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { JsxElement } from "typescript";
 import AppContext from "./contexts/AppContext/AppContext";
 import ExperiencePage from "./pages/experiencePage";
 import Homepage from "./pages/homepage";
