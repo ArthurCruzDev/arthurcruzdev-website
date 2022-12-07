@@ -1,0 +1,14 @@
+.icon{
+    color: black;
+    transition-property: width, height;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+    height: 24px;
+    width: 24px;
+    margin:auto;
+}
+.icon:hover{
+    color: whitesmoke;
+    height: 28.8px;
+    width: 28.8px;
+}
