@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AppContext from "./contexts/AppContext/AppContext";
 import ExperiencePage from "./pages/experiencePage";
-import Homepage from "./pages/homepage";
+import Homepage from "./pages/hoempage/homepage";
 import PortifolioPage from "./pages/portifolioPage";
 import SkillsPage from "./pages/skillsPage";
 

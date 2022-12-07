@@ -5,8 +5,9 @@
       "name": "Início",
       "description": "",
       "content": {
-        "mainTitle": "sou Arthur Cruz",
-        "mainSubTitle": "Desenvolvedor FullStack e Arquiteto de Soluções"
+        "mainTitle": "sou Arthur Cruz.",
+        "mainSubTitle": "Desenvolvedor FullStack e Arquiteto de Soluções",
+        "mainShortText": "Sou um desenvolvedor de software cujo interesse por computação e programação se iniciou aos 14 anos. Desde então, venho desenvolvendo vários tipos de software, trabalhando com várias liguagens, frameworks e ferramentas. Apesar de trabalhar com Frontend, Backend e DevOps, minha paixão é pelo Backend. Atualmente, estou me aprofundando em Rust no meu tempo livre."
       }
     },
     "experience": {

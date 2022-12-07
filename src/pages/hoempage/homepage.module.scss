@@ -1,0 +1,13 @@
+@keyframes bgBlink {
+    0%{background-color: transparent;}
+    50%{background-color: white;}
+    100%{background-color: transparent;}
+}
+
+.backgroundAnimated{
+    animation-name: bgBlink;
+    animation-duration: 0.750s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-direction: alternate;
+}
