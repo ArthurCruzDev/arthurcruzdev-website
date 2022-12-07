@@ -11,3 +11,9 @@
     animation-timing-function: step-start;
     animation-direction: alternate;
 }
+
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: theme("colors.background");
+}

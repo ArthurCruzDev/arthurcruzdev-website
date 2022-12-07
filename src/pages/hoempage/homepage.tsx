@@ -27,6 +27,9 @@ const Homepage = () => {
           {t("pages.homepage.content.mainShortText")}
         </p>
       </section>
+      <div className={"mx-3"}>
+        <div className={"mt-4 md:max-w-3xl md:mx-auto " + styles.divider}></div>
+      </div>
     </PageLayout>
   );
 };
