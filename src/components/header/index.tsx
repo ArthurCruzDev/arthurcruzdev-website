@@ -5,9 +5,7 @@ import { NavLink, useMatch } from "react-router-dom";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { AppRoutes } from "../../App";
 import styles from "./index.module.scss";
-import AppContext, {
-  AppContextType,
-} from "../../contexts/AppContext/AppContext";
+import AppContext from "../../contexts/AppContext/AppContext";
 
 const backdropRoot = document.querySelector("#backdrop-root") as HTMLElement;
 const overlayRoot = document.querySelector("#overlay-root") as HTMLElement;
@@ -105,7 +103,7 @@ const SideNav = (props: SideNavProps) => {
         (props.isNavOpen ? " " + styles.isNavOpen : "")
       }
     >
-      <span className="w-full flex flex-row justify-end mb-3 sm:hidden">
+      <span className="w-full flex flex-row justify-end mb-3 md:hidden">
         <XMarkIcon
           className="h-8 w-8 mr-3 text-neutral-800 "
           onClick={closeSideNavHandler}
@@ -144,7 +142,7 @@ const Header = () => {
           )}
         </React.Fragment>
       }
-      <div className="hidden sm:block md:w-full">
+      <div className="hidden md:block md:w-full">
         <NavList></NavList>
       </div>
       {
@@ -158,7 +156,7 @@ const Header = () => {
         ></span>
       }
       <Bars4Icon
-        className="h-8 w-8 text-neutral-800 sm:hidden"
+        className="h-8 w-8 text-neutral-800 md:hidden"
         onClick={menuClickHandler}
       ></Bars4Icon>
     </nav>

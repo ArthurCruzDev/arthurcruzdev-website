@@ -23,7 +23,7 @@ const Homepage = () => {
         <h3 className="mt-4 text-stone-400 text-left">
           {t("pages.homepage.content.mainSubTitle")}
         </h3>
-        <p className="mt-8 text-stone-300 font-light text-justify text-sm leading-5 md:max-w-xl">
+        <p className="mt-8 text-stone-300 font-light text-justify text-sm leading-6 md:max-w-xl">
           {t("pages.homepage.content.mainShortText")}
         </p>
       </section>
