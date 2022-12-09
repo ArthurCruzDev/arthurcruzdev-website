@@ -4,7 +4,7 @@ import { TfiEmail } from "react-icons/tfi";
 import styles from "./index.module.scss";
 export const Footer = () => {
   return (
-    <div className="bg-background w-100 h-28 mt-auto flex flex-col p-3 justify-end items-center">
+    <div className="bg-background w-full h-28 mt-auto flex flex-col p-3 justify-end items-center">
       <div className="flex flex-row flex-nowrap justify-between w-36 h-8 ">
         <a
           href="https://github.com/ArthurCruzDev"

@@ -123,42 +123,45 @@ const Header = () => {
   };
 
   return (
-    <nav className="flex flex-row justify-end items-center p-3 h-14 bg-sky-600">
-      {
-        <React.Fragment>
-          {createPortal(
-            <Backdrop
-              clickHandler={() => setShowSideNav(false)}
-              isNavOpen={showSideNav}
-            />,
-            backdropRoot
-          )}
-          {createPortal(
-            <SideNav
-              clickHandler={() => setShowSideNav(false)}
-              isNavOpen={showSideNav}
-            />,
-            overlayRoot
-          )}
-        </React.Fragment>
-      }
-      <div className="hidden md:block md:w-full">
-        <NavList></NavList>
+    <nav className="w-full flex flex-row justify-center items-center p-3 h-14 bg-sky-600">
+      <div className="w-full flex flex-row justify-end md:justify-between md:max-w-7xl">
+        {
+          <React.Fragment>
+            {createPortal(
+              <Backdrop
+                clickHandler={() => setShowSideNav(false)}
+                isNavOpen={showSideNav}
+              />,
+              backdropRoot
+            )}
+            {createPortal(
+              <SideNav
+                clickHandler={() => setShowSideNav(false)}
+                isNavOpen={showSideNav}
+              />,
+              overlayRoot
+            )}
+          </React.Fragment>
+        }
+        <div className="hidden md:block md:w-full">
+          <NavList></NavList>
+        </div>
+        {
+          <span
+            className={
+              "fi w-8 h-8 mr-4 " +
+              (appState.lang === "pt-BR" ? "fi-br" : "fi-us")
+            }
+            onClick={() =>
+              appState.setLang(appState.lang === "pt-BR" ? "en-US" : "pt-BR")
+            }
+          ></span>
+        }
+        <Bars4Icon
+          className="h-8 w-8 text-neutral-800 md:hidden"
+          onClick={menuClickHandler}
+        ></Bars4Icon>
       </div>
-      {
-        <span
-          className={
-            "fi w-8 h-8 mr-4 " + (appState.lang === "pt-BR" ? "fi-br" : "fi-us")
-          }
-          onClick={() =>
-            appState.setLang(appState.lang === "pt-BR" ? "en-US" : "pt-BR")
-          }
-        ></span>
-      }
-      <Bars4Icon
-        className="h-8 w-8 text-neutral-800 md:hidden"
-        onClick={menuClickHandler}
-      ></Bars4Icon>
     </nav>
   );
 };

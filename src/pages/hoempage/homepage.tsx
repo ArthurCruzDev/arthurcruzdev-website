@@ -8,7 +8,7 @@ const Homepage = () => {
   const { t } = useTranslation();
   return (
     <PageLayout pageName="homepage" pageURL={AppRoutes.homepage}>
-      <section className="px-3 py-5 flex flex-col md:max-w-3xl md:mx-auto">
+      <section className="px-3 py-5 flex flex-col w-full">
         <div
           className={
             "text-sky-600 text-base font-extrabold py-1 flex flex-row align-baseline "
@@ -28,7 +28,7 @@ const Homepage = () => {
         </p>
       </section>
       <div className={"mx-3"}>
-        <div className={"mt-4 md:max-w-3xl md:mx-auto " + styles.divider}></div>
+        <div className={"mt-4 w-full " + styles.divider}></div>
       </div>
     </PageLayout>
   );
