@@ -34,4 +34,11 @@
     font-weight: 500;
     color: white;
   }
+
+  h5 {
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    font-weight: 500;
+    color: white;
+  }
 }
