@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AppContext from "./contexts/AppContext/AppContext";
-import ExperiencePage from "./pages/experiencePage";
+import ExperiencePage from "./pages/experience/experiencePage";
 import Homepage from "./pages/hoempage/homepage";
-import PortifolioPage from "./pages/portifolioPage";
-import SkillsPage from "./pages/skillsPage";
+import PortifolioPage from "./pages/portifolio/portifolioPage";
+import SkillsPage from "./pages/skills/skillsPage";
 
 export const AppRoutes = {
   homepage: "/",
