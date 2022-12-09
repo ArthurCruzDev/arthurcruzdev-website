@@ -21,7 +21,7 @@ const NavListLink = (props: NavListLinkPropsInterface) => {
   return (
     <li
       className={
-        " w-full h-8 flex flex-row justify-center items-center hover:bg-slate-800 md:w-auto md:px-2 " +
+        "w-full h-8 flex flex-row justify-center items-center text-neutral-900 font-semibold uppercase hover:bg-slate-800 hover:text-slate-200 md:w-auto md:px-2 " +
         (useMatch(props.to) ? "bg-slate-800" : "bg-transparent")
       }
     >
@@ -30,7 +30,7 @@ const NavListLink = (props: NavListLinkPropsInterface) => {
           if (isActive) {
             return "w-full text-slate-200";
           } else {
-            return "w-full hover:text-slate-200 ";
+            return "w-full  ";
           }
         }}
         to={props.to}
