@@ -117,7 +117,7 @@ const SideNav = (props: SideNavProps) => {
 const Header = () => {
   const [showSideNav, setShowSideNav] = useState(false);
   const appState = useContext(AppContext);
-
+  const { t } = useTranslation();
   const menuClickHandler = () => {
     setShowSideNav(true);
   };
@@ -147,15 +147,20 @@ const Header = () => {
           <NavList></NavList>
         </div>
         {
-          <span
-            className={
-              "fi w-8 h-8 mr-4 " +
-              (appState.lang === "pt-BR" ? "fi-br" : "fi-us")
-            }
-            onClick={() =>
-              appState.setLang(appState.lang === "pt-BR" ? "en-US" : "pt-BR")
-            }
-          ></span>
+          <div className="flex flex-row items-center justify-between ">
+            <span className="font-medium text-sm">
+              {t("changeLanguageText")}
+            </span>
+            <span
+              className={
+                "fi w-8 h-8 mr-4 ml-2 cursor-pointer hover:w-9 " +
+                (appState.lang === "pt-BR" ? "fi-br" : "fi-us")
+              }
+              onClick={() =>
+                appState.setLang(appState.lang === "pt-BR" ? "en-US" : "pt-BR")
+              }
+            ></span>
+          </div>
         }
         <Bars4Icon
           className="h-8 w-8 text-neutral-800 md:hidden"
