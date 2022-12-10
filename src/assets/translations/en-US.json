@@ -9,8 +9,10 @@
         "mainTitle": "I'm Arthur Cruz.",
         "mainSubTitle": "FullStack developer and Solutions Architect",
         "mainShortText": "I'm a software developer whose interest in computer science and programming started at age 14. Since then, I've been developing different kinds of software, working with several languages, frameworks and tools. Despite working with Frontend, Backend and DevOps, I like the Backend the most. Currently, I'm going deep into Rust in my free time.",
-        "wannaKnowJobText": "Want to know my work?",
-        "wannaKnowJobSubText": "Then choose a path to begin..."
+        "wannaKnowJobText": "Do you want to know about my work?",
+        "wannaKnowJobSubText": "Then choose a path to begin...",
+        "skillsSectionTitle": "Curious abou my skills?",
+        "skillsSectionSubtitle": "All the technologies, languages, tools, educational background, in detail, this way..."
       }
     },
     "experience": {

@@ -11,7 +11,7 @@ export interface PageLayoutProperties {
 
 const PageLayout = (props: PageLayoutProperties): JSX.Element => {
   return (
-    <div className="min-w-screen min-h-screen flex flex-col justify-start items-center">
+    <div className="min-w-full min-h-screen flex flex-col justify-start items-center">
       {usePageInfo(props.pageName, window.location.hostname + props.pageURL)}
       <Header />
       <div className="w-full max-w-7xl ">{props.children}</div>
