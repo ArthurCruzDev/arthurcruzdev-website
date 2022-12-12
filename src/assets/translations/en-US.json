@@ -17,7 +17,31 @@
     },
     "experience": {
       "name": "Experience",
-      "description": ""
+      "description": "",
+      "content": {
+        "jobs": {
+          "softwareArchitect": "Software Architect",
+          "techLeader": "Tech Leader",
+          "squadLeader": "Squad Leader",
+          "webDeveloperAnalyst": "Web Developer and Analyst",
+          "petScholarshipStudent": "Information Systems' PET Scholarship Student",
+          "selfEmployedWebDesigner": "Web Designer"
+        },
+        "experienceDescriptions": {
+          "pumpkinSoftwareArchitect": "",
+          "pumpkinTechLeader": "",
+          "sankhyaSquadLeader": "I conducted the roadmap development team for the products: Gestão de Lojas, Sankhya Checkout and PDV Web (inside Sankhya OM ERP).",
+          "sankhyaWebDeveloperAnalyst": "",
+          "petScholarshipStudent": "",
+          "selfEmployedWebDesigner": ""
+        },
+        "companies": {
+          "pumpkin": "Pumpkin",
+          "sankhya": "Sankhya",
+          "pet": "Information System' PET",
+          "selfEmployed": "Self Employed"
+        }
+      }
     },
     "skills": {
       "name": "Skills",

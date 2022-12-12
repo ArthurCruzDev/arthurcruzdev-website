@@ -17,7 +17,31 @@
     },
     "experience": {
       "name": "Experiência",
-      "description": ""
+      "description": "",
+      "content": {
+        "jobs": {
+          "softwareArchitect": "Arquiteto de Software",
+          "techLeader": "Líder Técnico",
+          "squadLeader": "Squad Lead",
+          "webDeveloperAnalyst": "Analista e Desenvolvedor Web",
+          "petScholarshipStudent": "Bolsista do PET de Sistemas de Informação",
+          "selfEmployedWebDesigner": "Web Designer"
+        },
+        "experienceDescriptions": {
+          "pumpkinSoftwareArchitect": "",
+          "pumpkinTechLeader": "",
+          "sankhyaSquadLeader": "Liderei a equipe de desenvolvimento de Roadmap para os produtos, Gestão de Lojas, Sankhya Checkout e PDV Web (dentro do ERP Sankhya OM).",
+          "sankhyaWebDeveloperAnalyst": "",
+          "petScholarshipStudent": "",
+          "selfEmployedWebDesigner": ""
+        },
+        "companies": {
+          "pumpkin": "Pumpkin",
+          "sankhya": "Sankhya",
+          "pet": "PET Sistemas de Informação",
+          "selfEmployed": "Autônomo"
+        }
+      }
     },
     "skills": {
       "name": "Habilidades",

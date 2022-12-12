@@ -1,5 +1,8 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import * as dayjs from "dayjs";
+import "dayjs/locale/en";
+import "dayjs/locale/pt-br";
 
 export type AppContextType = {
   lang: string;
@@ -25,6 +28,7 @@ export const AppContextProvider = (props: any) => {
   const changeAppLanguage = (newLanguage: string) => {
     i18n.changeLanguage(newLanguage);
     setAppLang(newLanguage);
+    newLanguage === "pt-BR" ? dayjs.locale("pt-br") : dayjs.locale("en");
   };
 
   return (
